@@ -1,23 +1,18 @@
 #!/usr/bin/with-contenv bash
 
-# Check if Webgrab++ config file exists in config folder.
+# copy config
 [[ ! -e /config/WebGrab++.config.xml ]] && \
 	cp /defaults/WebGrab++.config.xml /config/
-
-# Check if Ini folder exists in config folder.
 [[ ! -e /config/ini/siteini.pack ]] && \
 	cp -R /defaults/ini/siteini.pack /config/
 
-# Copy default cron file if not in config
-[[ ! -e /config/abc ]] && \
-	cp /defaults/abc /config/abc
-
 # add cron file for running webgrab+plus
-[[ -e /config/abc ]] && \
-	crontab -u abc /config/abc
+[[ ! -e /config/wg-cron ]] && \
+	cp /defaults/wg-cron /config/wg-cron
+crontab -u abc /config/wg-cron
 
-# Change owner for config files and guide.xml
-chown -R abc:abc /config \
+# permissions
+chown -R abc:abc \
+	/config \
 	/data
-chmod 766 /config \
-	/data
+
