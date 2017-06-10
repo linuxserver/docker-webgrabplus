@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+[[ -e /config/WebGrab++.config.xml ]] && \
+	cd /wg++/bin || exit
+	exec \
+		s6-setuidgid abc \
+			mono WebGrab+Plus.exe  "/config" 
+
+exit 0
