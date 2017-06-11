@@ -1,6 +1,10 @@
 FROM lsiobase/mono
 MAINTAINER saarg
 
+# package versions
+ARG WEBGRAB_VER="2.0.0"
+ARG WGUPDATE_VER="2.0.7_beta"
+
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -17,18 +21,20 @@ RUN \
 	cron && \
 
 # install webgrab
+ WEBGRAB_BRANCH=${WEBGRAB_VER%.*} && \
  mkdir -p \
 	/app/wg++ && \
  curl -o /tmp/wg++.tar.gz -L \
-	http://webgrabplus.com/sites/default/files/download/SW/V2.0.0/WebGrabPlus_V2.0_install.tar.gz && \
+	"http://webgrabplus.com/sites/default/files/download/SW/V${WEBGRAB_VER}/WebGrabPlus_V${WEBGRAB_BRANCH}_install.tar.gz" && \
  tar xzf \
  /tmp/wg++.tar.gz -C \
 	/app/wg++ --strip-components=1 && \
 
 # install wg-update
+ WGUPDATE_BRANCH=${WGUPDATE_VER%%_*} && \
  curl -o \
  /tmp/update.tar.gz -L \
-	http://webgrabplus.com/sites/default/files/download/SW/V2.0.7/WebGrabPlus_V2.0.7_beta_install.tar.gz && \
+	"http://webgrabplus.com/sites/default/files/download/SW/V${WGUPDATE_BRANCH}/WebGrabPlus_V${WGUPDATE_VER}_install.tar.gz" && \
  tar xf \
 	/tmp/update.tar.gz -C \
 	/app/wg++/bin/ --strip-components=2 && \
@@ -37,7 +43,7 @@ RUN \
  curl -o \
  /tmp/ini.zip -L \
 	http://webgrabplus.com/sites/default/files/download/ini/SiteIniPack_current.zip && \
- unzip /tmp/ini.zip -d /defaults/ini/ && \
+ unzip -q /tmp/ini.zip -d /defaults/ini/ && \
 
 # cleanup
  rm -rf \
