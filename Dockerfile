@@ -21,7 +21,7 @@ RUN \
 	cron && \
 
 # install webgrab
- WEBGRAB_BRANCH=${WEBGRAB_VER%.*} && \
+ WEBGRAB_BRANCH=${WEBGRAB_VER%.0} && \
  mkdir -p \
 	/app/wg++ && \
  curl -o /tmp/wg++.tar.gz -L \
