@@ -2,8 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
-[appurl]: www.example.com
-[hub]: https://hub.docker.com/r/example/example/
+[appurl]: http://www.webgrabplus.com
+[hub]: https://hub.docker.com/r/linuxserver/webgrabplus/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,23 +12,20 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
-# <image-name>
+# linuxserver/webgrabplus
+[![](https://images.microbadger.com/badges/version/linuxserver/webgrabplus.svg)](https://microbadger.com/images/linuxserver/webgrabplus "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/webgrabplus.svg)](http://microbadger.com/images/linuxserver/webgrabplus "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/webgrabplus.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/webgrabplus.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-webgrabplus)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-webgrabplus/)
 
-Provide a short, concise description of the application. No more than two SHORT paragraphs. Link to sources where possible and include an image illustrating your point if necessary. Point users to the original applications website, as that's the best place to get support - not here.
-
-Our Plex container has immaculate docs so follow that if in doubt for layout.
-
-`IMPORTANT, replace all instances of <image-name> with the correct dockerhub repo (ie linuxserver/plex) and <container-name> information (ie, plex)`
+[WebGrab+Plus][appurl] is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.
 
 ## Usage
 
 ```
 docker create \
-  --name=<container-name> \
+  --name=webgrabplus \
   -v <path to data>:/config \
+  -v <path to data>:/data \
   -e PGID=<gid> -e PUID=<uid>  \
-  -p 1234:1234 \
-  <image-name>
+  linuxserver/webgrabplus
 ```
 
 ## Parameters
@@ -40,12 +37,12 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 
 
-* `-p 1234` - the port(s)
-* `-v /config` - explain what lives here
+* `-v /config` - where webgrabplus should store it's config files
+* `-v /config` - where webgrabplus should store it's data files
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
-It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it <container-name> /bin/bash`.
+It is based on ubuntu xenial with s6 overlay, for shell access whilst the container is running do `docker exec -it webgrabplus /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -65,16 +62,16 @@ Insert a basic user guide here to get a n00b up and running with the software in
 
 ## Info
 
-* Shell access whilst the container is running: `docker exec -it <container-name> /bin/bash`
-* To monitor the logs of the container in realtime: `docker logs -f <container-name>`
+* Shell access whilst the container is running: `docker exec -it webgrabplus /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f webgrabplus`
 
 * container version number 
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' <container-name>`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' webgrabplus`
 
 * image version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' <image-name>`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/webgrabplus`
 
 ## Versions
 
