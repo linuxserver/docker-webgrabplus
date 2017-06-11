@@ -1,1 +1,1 @@
-2 3 * * * /defaults/update.sh
+2 3 * * * s6-setuidgid abc /bin/bash /defaults/update.sh

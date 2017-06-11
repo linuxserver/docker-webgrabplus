@@ -1,4 +1,4 @@
-FROM lsiobase/mono
+FROM lsiobase/xenial
 MAINTAINER saarg
 
 # package versions
@@ -16,9 +16,15 @@ ENV HOME /config
 
 # install runtime dependencies
 RUN \
+ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
+ echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list && \
  apt-get update && \
  apt-get install -y \
-	cron && \
+	cron \
+	libmono-system-data4.0-cil \
+	libmono-system-web4.0-cil \
+	mono-runtime \
+	unzip && \
 
 # install webgrab
  WEBGRAB_BRANCH=${WEBGRAB_VER%.0} && \

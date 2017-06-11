@@ -9,7 +9,7 @@
 # add cron file for running webgrab+plus
 [[ ! -e /config/wg-cron ]] && \
 	cp /defaults/wg-cron /config/wg-cron
-crontab -u abc /config/wg-cron
+crontab /config/wg-cron
 
 # permissions
 chown -R abc:abc \
