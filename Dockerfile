@@ -27,7 +27,7 @@ RUN \
 	unzip && \
 
 # install webgrab
- WEBGRAB_BRANCH=${WEBGRAB_VER%.0} && \
+ WEBGRAB_BRANCH=${WEBGRAB_VER%.*} && \
  mkdir -p \
 	/app/wg++ && \
  curl -o /tmp/wg++.tar.gz -L \
