@@ -36,7 +36,7 @@ RUN \
  /tmp/update.tar.gz -L \
 	"http://webgrabplus.com/sites/default/files/download/SW/V${WGUPDATE_BRANCH}/WebGrabPlus_V${WGUPDATE_VER}_install.tar.gz" && \
  tar xf \
-	/tmp/update.tar.gz -C \
+ /tmp/update.tar.gz -C \
 	/app/wg++/bin/ --strip-components=2 && \
 
 # download siteini.pack
