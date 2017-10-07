@@ -3,7 +3,7 @@ MAINTAINER saarg
 
 # package versions
 ARG WEBGRAB_VER="2.0.0"
-ARG WGUPDATE_VER="2.0.7_beta"
+ARG WGUPDATE_VER="2.1.5_beta"
 
 # set version label
 ARG BUILD_DATE
