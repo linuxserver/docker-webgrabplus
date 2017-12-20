@@ -1,23 +1,24 @@
 FROM lsiobase/xenial
-MAINTAINER saarg
-
-# package versions
-ARG WEBGRAB_VER="2.0.0"
-ARG WGUPDATE_VER="2.1.5_beta"
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="saarg"
 
-# Set correct environment variables.
+# package versions
+ARG WEBGRAB_VER="2.0.0"
+ARG WGUPDATE_VER="2.1.5_beta"
+
+# environment variables.
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /config
 
-# install runtime dependencies
 RUN \
+ echo "**** add mono repository ****" && \
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
  echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list && \
+ echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
 	cron \
@@ -25,8 +26,7 @@ RUN \
 	libmono-system-web4.0-cil \
 	mono-runtime \
 	unzip && \
-
-# install webgrab
+ echo "**** install webgrabplus ****" && \
  WEBGRAB_BRANCH=${WEBGRAB_VER%.*} && \
  mkdir -p \
 	/app/wg++ && \
@@ -35,8 +35,6 @@ RUN \
  tar xzf \
  /tmp/wg++.tar.gz -C \
 	/app/wg++ --strip-components=1 && \
-
-# install wg-update
  WGUPDATE_BRANCH=${WGUPDATE_VER%%_*} && \
  curl -o \
  /tmp/update.tar.gz -L \
@@ -44,14 +42,12 @@ RUN \
  tar xf \
  /tmp/update.tar.gz -C \
 	/app/wg++/bin/ --strip-components=2 && \
-
-# download siteini.pack
+ echo "**** download siteini.pack ****" && \
  curl -o \
  /tmp/ini.zip -L \
 	http://webgrabplus.com/sites/default/files/download/ini/SiteIniPack_current.zip && \
  unzip -q /tmp/ini.zip -d /defaults/ini/ && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
