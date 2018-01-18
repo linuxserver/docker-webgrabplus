@@ -57,8 +57,31 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application
 
-Insert a basic user guide here to get a n00b up and running with the software inside the container. DELETE ME
+To configure WebGrab+Plus follow the guide found here: [http://webgrabplus.com/documentation/configuration/howto][guideurl].
 
+Note that there are some things in the guide that does not apply to this container. Below you can find the changes.
+
+**The configuration files are found where your config volume is mounted.**  
+**Do not change the filename tag in the configuration file!**
+
+The /data volume mapping is where WebGrab+Plus outputs the xml file. To use the xml file in another program, you have to point it to the host path you mapped the /data volume to.
+
+To adjust the scheduled cron job for grabbing, edit the wg-cron file found in the `/config` folder. After you have edited the the wg-cron file, restart the container to apply the new schedule.
+Do not adjust the command!
+
+Below is the syntax of the cron file.
+
+```
+ ┌───────────── minute (0 - 59)
+ │ ┌───────────── hour (0 - 23)
+ │ │ ┌───────────── day of month (1 - 31)
+ │ │ │ ┌───────────── month (1 - 12)
+ │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+ │ │ │ │ │                                       7 is also Sunday on some systems)
+ │ │ │ │ │
+ │ │ │ │ │
+ * * * * *  s6-setuidgid abc /bin/bash /defaults/update.sh
+```
 
 ## Info
 
@@ -75,4 +98,4 @@ Insert a basic user guide here to get a n00b up and running with the software in
 
 ## Versions
 
-+ **dd.MM.yy:** Initial Release.
++ **18.01.18:** Initial Release.
