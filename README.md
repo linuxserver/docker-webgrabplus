@@ -4,7 +4,7 @@
 [podcasturl]: https://www.linuxserver.io/podcast/
 [appurl]: http://www.webgrabplus.com
 [hub]: https://hub.docker.com/r/linuxserver/webgrabplus/
-[guideurl]: [http://webgrabplus.com/documentation/configuration/howto
+[guideurl]: http://webgrabplus.com/documentation/configuration/howto
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -58,7 +58,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application
 
-To configure WebGrab+Plus follow the [guide][guideurl].
+To configure WebGrab+Plus follow the [guide][guideurl]
 
 Note that there are some things in the guide that does not apply to this container. Below you can find the changes.
 
