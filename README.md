@@ -23,7 +23,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 ```
 docker create \
   --name=webgrabplus \
-  -v <path to data>:/config \
+  -v <path to config>:/config \
   -v <path to data>:/data \
   -e PGID=<gid> -e PUID=<uid>  \
   linuxserver/webgrabplus
@@ -39,7 +39,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 
 * `-v /config` - where webgrabplus should store it's config files
-* `-v /config` - where webgrabplus should store it's data files
+* `-v /data` - where webgrabplus should store it's data files
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
