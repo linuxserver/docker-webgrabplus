@@ -3,7 +3,7 @@
 # copy config
 [[ ! -e /config/WebGrab++.config.xml ]] && \
 	cp /defaults/WebGrab++.config.xml /config/
-[[ ! -e /config/ini/siteini.pack ]] && \
+[[ ! -e /config/siteini.pack ]] && \
 	cp -R /defaults/ini/siteini.pack /config/
 
 # add cron file for running webgrab+plus
