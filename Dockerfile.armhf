@@ -11,7 +11,7 @@ LABEL maintainer="saarg"
 
 # package versions
 ARG WEBGRAB_VER="2.0.0"
-ARG WGUPDATE_VER="2.1.5_beta"
+ARG WGUPDATE_VER="2.1.7_beta"
 
 # environment variables.
 ARG DEBIAN_FRONTEND="noninteractive"
