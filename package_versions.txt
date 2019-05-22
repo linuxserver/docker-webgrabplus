@@ -3,7 +3,7 @@ apt1.2.31
 apt-utils1.2.31
 base-files9.4ubuntu4.8
 base-passwd3.5.39
-bash4.3-14ubuntu1.2
+bash4.3-14ubuntu1.3
 binfmt-support2.1.6-1
 binutils2.26.1-1ubuntu1~16.04.8
 bsdutils1:2.27.1-6ubuntu3.6
@@ -14,7 +14,7 @@ coreutils8.25-2ubuntu3~16.04
 cron3.0pl1-128ubuntu2
 curl7.47.0-1ubuntu2.12
 dash0.5.8-2.1ubuntu2
-debconf1.5.58ubuntu1
+debconf1.5.58ubuntu2
 debianutils4.7
 diffutils1:3.3-3
 dpkg1.18.4ubuntu1.5
