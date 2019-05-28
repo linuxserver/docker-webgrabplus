@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:arm32v7-xenial
+FROM lsiobase/ubuntu:arm32v7-bionic
 
 # set version label
 ARG BUILD_DATE
@@ -7,8 +7,8 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="saarg"
 
 # package versions
-ARG WEBGRAB_VER="2.0.0"
-ARG WGUPDATE_VER="2.1.7_beta"
+ARG WEBGRAB_VER="2.1.0"
+ARG WGUPDATE_VER="2.1.9_beta"
 
 # environment variables.
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -16,8 +16,11 @@ ENV HOME /config
 
 RUN \
  echo "**** add mono repository ****" && \
+ apt-get update && \
+ apt-get install -y \
+	gnupg && \
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
- echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list && \
+ echo "deb http://download.mono-project.com/repo/ubuntu bionic main" | tee /etc/apt/sources.list.d/mono-official.list && \
  echo "**** install packages ****" && \
  apt-get update && \
  apt-get install -y \
