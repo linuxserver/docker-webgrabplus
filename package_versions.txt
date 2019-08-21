@@ -75,7 +75,7 @@ libgcrypt201.8.1-4ubuntu1.1
 libgdbm51.14.1-6
 libgdbm-compat41.14.1-6
 libgdiplus5.6.1-0xamarin6+ubuntu1804b1
-libgif75.1.4-2
+libgif75.1.4-2ubuntu0.1
 libglib2.0-02.56.4-0ubuntu0.18.04.4
 libglib2.0-data2.56.4-0ubuntu0.18.04.4
 libgmp102:6.1.2+dfsg-2
