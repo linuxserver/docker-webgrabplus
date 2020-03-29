@@ -7,8 +7,8 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="saarg"
 
 # package versions
-ARG WEBGRAB_VER="2.1.0"
-ARG WGUPDATE_VER="2.1.9_beta"
+ARG WEBGRAB_VER="3.0.0"
+ARG WGUPDATE_VER=""
 
 # environment variables.
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -38,13 +38,15 @@ RUN \
  tar xzf \
  /tmp/wg++.tar.gz -C \
 	/app/wg++ --strip-components=1 && \
+ if [ ! -z "$WGUPDATE_ver" ]; then \
  WGUPDATE_BRANCH=${WGUPDATE_VER%%_*} && \
  curl -o \
  /tmp/update.tar.gz -L \
 	"http://webgrabplus.com/sites/default/files/download/SW/V${WGUPDATE_BRANCH}/WebGrabPlus_V${WGUPDATE_VER}_install.tar.gz" && \
  tar xf \
  /tmp/update.tar.gz -C \
-	/app/wg++/bin/ --strip-components=2 && \
+	/app/wg++/bin/ --strip-components=2; \
+ fi && \
  echo "**** download siteini.pack ****" && \
  curl -o \
  /tmp/ini.zip -L \
