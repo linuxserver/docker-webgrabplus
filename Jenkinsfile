@@ -103,7 +103,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' echo V2.1.0 ''',
+            script: ''' echo V3.1.0 ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
