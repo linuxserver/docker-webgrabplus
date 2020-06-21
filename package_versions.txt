@@ -189,6 +189,7 @@ login1:4.5-1ubuntu2
 lsb-base9.20170808ubuntu1
 mawk1.3.3-17ubuntu3
 mono-4.0-gac6.8.0.123-0xamarin2+ubuntu1804b1
+mono-complete6.8.0.123-0xamarin2+ubuntu1804b1
 mono-gac6.8.0.123-0xamarin2+ubuntu1804b1
 mono-llvm-support6.8.0.123-0xamarin2+ubuntu1804b1
 mono-llvm-tools6.0+mono20190708165219-0xamarin2+ubuntu1804b1
