@@ -121,6 +121,7 @@ libmono-system-design4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-drawing4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-enterpriseservices4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-ldap4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
+libmono-system-net-http-webrequest4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-numerics4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-runtime-serialization-formatters-soap4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
 libmono-system-security4.0-cil6.8.0.123-0xamarin2+ubuntu1804b1
