@@ -62,7 +62,8 @@ app_setup_block: |
 
 # changelog
 changelogs:
-  - { date: "22.06.20:", desc: "Add mono webrequest library " }
+  - { date: "12.10.20:", desc: "Update to version 3.1.1 beta." } 
+  - { date: "22.06.20:", desc: "Add mono webrequest library." }
   - { date: "18.06.20:", desc: "Update to v3.1.0." }
   - { date: "29.03.20:", desc: "Update to v3.0.0. Changed to use wg3-cron file." }
   - { date: "28.05.19:", desc: "Update to v2.1.0 and beta v2.1.9, rebase to bionic." }
