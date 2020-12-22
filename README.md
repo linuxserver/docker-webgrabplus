@@ -244,7 +244,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 ## Versions
 
 * **12.10.20:** - Fix version number in jenkinsfile.
-* **12.10.20:** - Update to version 3.1.4 beta.
+* **12.10.20:** - Update to version 3.1.1 beta.
 * **22.06.20:** - Add mono webrequest library.
 * **18.06.20:** - Update to v3.1.0.
 * **29.03.20:** - Update to v3.0.0. Changed to use wg3-cron file.
