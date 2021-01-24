@@ -18,8 +18,8 @@ common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "<path to config>", desc: "Where webgrabplus should store it's config files." }
-  - { vol_path: "/data", vol_host_path: "<path to data>", desc: "Where webgrabplus should store it's data files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Where webgrabplus should store it's config files." }
+  - { vol_path: "/data", vol_host_path: "/path/to/data", desc: "Where webgrabplus should store it's data files." }
 param_usage_include_ports: false
 param_usage_include_env: true
 param_env_vars:
@@ -62,6 +62,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "24.01.21:", desc: "Update to version 3.1.5 beta." } 
   - { date: "22.12.20:", desc: "Update to version 3.1.4 beta." } 
   - { date: "12.10.20:", desc: "Fix version number in jenkinsfile." } 
   - { date: "12.10.20:", desc: "Update to version 3.1.1 beta." } 
