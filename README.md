@@ -77,8 +77,8 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - <path to config>:/config
-      - <path to data>:/data
+      - /path/to/config:/config
+      - /path/to/data:/data
     restart: unless-stopped
 ```
 
@@ -90,8 +90,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -v <path to config>:/config \
-  -v <path to data>:/data \
+  -v /path/to/config:/config \
+  -v /path/to/data:/data \
   --restart unless-stopped \
   ghcr.io/linuxserver/webgrabplus
 ```
@@ -243,6 +243,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **24.01.21:** - Update to version 3.1.5 beta.
 * **22.12.20:** - Update to version 3.1.4 beta.
 * **12.10.20:** - Fix version number in jenkinsfile.
 * **12.10.20:** - Update to version 3.1.1 beta.
