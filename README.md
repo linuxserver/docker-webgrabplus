@@ -243,6 +243,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.01.21:** - Update external version number to show as 3.1.5.
 * **24.01.21:** - Update to version 3.1.5 beta.
 * **22.12.20:** - Update to version 3.1.4 beta.
 * **12.10.20:** - Fix version number in jenkinsfile.
