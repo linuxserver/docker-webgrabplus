@@ -62,6 +62,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.01.21:", desc: "Update external version number to show as 3.1.5." } 
   - { date: "24.01.21:", desc: "Update to version 3.1.5 beta." } 
   - { date: "22.12.20:", desc: "Update to version 3.1.4 beta." } 
   - { date: "12.10.20:", desc: "Fix version number in jenkinsfile." } 
