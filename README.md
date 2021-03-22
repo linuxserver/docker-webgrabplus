@@ -243,6 +243,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **22.03.21:** - Update to version 3.1.7 beta.
 * **07.03.21:** - Update to version 3.1.6 beta.
 * **29.01.21:** - Update external version number to show as 3.1.5.
 * **24.01.21:** - Update to version 3.1.5 beta.
