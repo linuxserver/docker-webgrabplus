@@ -40,6 +40,7 @@ Find us at:
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fwebgrabplus%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/webgrabplus/latest/index.html)
 
 [Webgrabplus](http://www.webgrabplus.com) is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.
+
 [![webgrabplus](http://www.webgrabplus.com/sites/default/themes/WgTheme/images/slideshows/EPG_fading.jpg)](http://www.webgrabplus.com)
 
 ## Supported Architectures
