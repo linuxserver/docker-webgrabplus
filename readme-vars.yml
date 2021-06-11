@@ -62,6 +62,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "05.06.21:", desc: "Added mono-devel dependency." } 
   - { date: "04.06.21:", desc: "Update to version 3.1.8 beta." } 
   - { date: "22.03.21:", desc: "Update to version 3.1.7 beta." } 
   - { date: "07.03.21:", desc: "Update to version 3.1.6 beta." } 
