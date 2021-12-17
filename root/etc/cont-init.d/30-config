@@ -2,20 +2,19 @@
 
 # copy config
 [[ ! -e /config/WebGrab++.config.xml ]] && \
-	cp /defaults/WebGrab++.config.xml /config/
+    cp /defaults/WebGrab++.config.xml /config/
 [[ ! -e /config/siteini.pack ]] && \
-	cp -R /defaults/ini/siteini.pack /config/
+    cp -R /defaults/ini/siteini.pack /config/
 
 # warn user about changing name for crontab file
 echo "******** Please use the file wg3-cron to adjust the scheduled time for running WebGrab++. wg-cron can now be deleted. ********"
 
 # add cron file for running webgrab+plus
 [[ ! -e /config/wg3-cron ]] && \
-	cp /defaults/wg3-cron /config/wg3-cron
+    cp /defaults/wg3-cron /config/wg3-cron
 crontab -u abc /config/wg3-cron
 
 # permissions
 chown -R abc:abc \
-	/config \
-	/data
-
+    /config \
+    /data
