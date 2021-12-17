@@ -246,6 +246,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **17.12.21:** - Update to version 3.2.2 beta.
 * **05.08.21:** - Update to version 3.2.1 beta.
 * **05.06.21:** - Added mono-devel dependency.
 * **04.06.21:** - Update to version 3.1.8 beta.
