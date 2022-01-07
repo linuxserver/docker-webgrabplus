@@ -3,12 +3,12 @@
 # jenkins variables
 project_name: docker-webgrabplus
 external_type: na
-custom_version_command: 'echo V3.2.2'
+custom_version_command: "curl -fsL 'http://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\\\\1|'"
 release_type: stable
 release_tag: latest
 ls_branch: master
 repo_vars:
-  - BUILD_VERSION_ARG = 'WEBGRAB_VERSION'
+  - BUILD_VERSION_ARG = 'WEBGRAB_VER'
   - LS_USER = 'linuxserver'
   - LS_REPO = 'docker-webgrabplus'
   - CONTAINER_NAME = 'webgrabplus'

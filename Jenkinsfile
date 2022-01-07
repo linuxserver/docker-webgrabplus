@@ -17,7 +17,7 @@ pipeline {
     GITLAB_TOKEN=credentials('b6f0f1dd-6952-4cf6-95d1-9c06380283f0')
     GITLAB_NAMESPACE=credentials('gitlab-namespace-id')
     SCARF_TOKEN=credentials('scarf_api_key')
-    BUILD_VERSION_ARG = 'WEBGRAB_VERSION'
+    BUILD_VERSION_ARG = 'WEBGRAB_VER'
     LS_USER = 'linuxserver'
     LS_REPO = 'docker-webgrabplus'
     CONTAINER_NAME = 'webgrabplus'
@@ -104,7 +104,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' echo V3.2.2 ''',
+            script: ''' curl -fsL 'http://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\\1|' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
