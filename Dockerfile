@@ -14,15 +14,17 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /config
 
 RUN \
-  echo "**** add dotnet repository ****" && \
-  curl -o /tmp/packages-microsoft-prod.deb -L \
-    https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb && \
-  dpkg -i /tmp/packages-microsoft-prod.deb && \
+  echo "**** install dotnet sdk ****" && \
+  mkdir -p /app/dotnet && \
+  curl -o /tmp/dotnet-install.sh -L \
+    https://dot.net/v1/dotnet-install.sh && \
+  chmod +x /tmp/dotnet-install.sh && \
+  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet && \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     cron \
-    dotnet-sdk-5.0 \
+    libicu66 \
     unzip && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
