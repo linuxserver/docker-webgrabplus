@@ -14,21 +14,15 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /config
 
 RUN \
-  echo "**** add mono repository ****" && \
-  apt-get update && \
-  apt-get install -y \
-    gnupg && \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-  echo "deb https://download.mono-project.com/repo/ubuntu focal main" | tee /etc/apt/sources.list.d/mono-official.list && \
+  echo "**** add dotnet repository ****" && \
+  curl -o /tmp/packages-microsoft-prod.deb -L \
+    https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb && \
+  dpkg -i /tmp/packages-microsoft-prod.deb && \
   echo "**** install packages ****" && \
   apt-get update && \
-  apt-get install -y \
+  apt-get install -y --no-install-recommends \
     cron \
-    libmono-system-data4.0-cil \
-    libmono-system-net-http-webrequest4.0-cil \
-    libmono-system-web4.0-cil \
-    mono-devel \
-    mono-runtime \
+    dotnet-sdk-5.0 \
     unzip && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
@@ -58,4 +52,4 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-VOLUME /config /data
+VOLUME /config
