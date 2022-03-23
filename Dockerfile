@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 # set version label
 ARG BUILD_DATE
@@ -10,22 +10,21 @@ LABEL maintainer="saarg"
 ARG WEBGRAB_VER
 
 # environment variables.
-ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /config
 
 RUN \
+  echo "**** install packages ****" && \
+  apk -U --update --no-cache add \
+    bash \
+    curl \
+    icu-libs \
+    unzip && \
   echo "**** install dotnet sdk ****" && \
   mkdir -p /app/dotnet && \
   curl -o /tmp/dotnet-install.sh -L \
     https://dot.net/v1/dotnet-install.sh && \
   chmod +x /tmp/dotnet-install.sh && \
   /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet && \
-  echo "**** install packages ****" && \
-  apt-get update && \
-  apt-get install -y --no-install-recommends \
-    cron \
-    libicu66 \
-    unzip && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
     WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
@@ -46,9 +45,7 @@ RUN \
   unzip -q /tmp/ini.zip -d /defaults/ini/ && \
   echo "**** cleanup ****" && \
   rm -rf \
-    /tmp/* \
-    /var/lib/apt/lists/* \
-    /var/tmp/*
+    /tmp/*
 
 # copy files
 COPY root/ /
