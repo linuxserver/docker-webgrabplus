@@ -24,7 +24,7 @@ RUN \
   curl -o /tmp/dotnet-install.sh -L \
     https://dot.net/v1/dotnet-install.sh && \
   chmod +x /tmp/dotnet-install.sh && \
-  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet && \
+  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
     WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
