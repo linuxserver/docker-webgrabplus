@@ -51,4 +51,4 @@ RUN \
 COPY root/ /
 
 # ports and volumes
-VOLUME /config
+VOLUME /config /data
