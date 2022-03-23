@@ -19,7 +19,7 @@ RUN \
   curl -o /tmp/dotnet-install.sh -L \
     https://dot.net/v1/dotnet-install.sh && \
   chmod +x /tmp/dotnet-install.sh && \
-  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet && \
+  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
