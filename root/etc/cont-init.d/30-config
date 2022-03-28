@@ -14,6 +14,10 @@ echo "******** Please use the file wg3-cron to adjust the scheduled time for run
     cp /defaults/wg3-cron /config/wg3-cron
 crontab -u abc /config/wg3-cron
 
+mkdir -p /app/wg++/bin.net/WebGrab+Plus
+mkdir -p /config/License
+ln -sf /config/License /app/wg++/bin.net/WebGrab+Plus
+
 # permissions
 chown -R abc:abc \
     /app \
