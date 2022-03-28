@@ -16,5 +16,6 @@ crontab -u abc /config/wg3-cron
 
 # permissions
 chown -R abc:abc \
+    /app \
     /config \
     /data
