@@ -62,6 +62,8 @@ The architectures supported by this image are:
 
 To configure WebGrab+Plus follow the [documentation](http://www.webgrabplus.com/documentation/configuration/)
 
+**Please note that depending on your host this container may not work with the `no-new-privileges=true` security-opt.**
+
 Note that there are some things in the guide that does not apply to this container. Below you can find the changes.
 
 **The configuration files are found where your config volume is mounted.**
