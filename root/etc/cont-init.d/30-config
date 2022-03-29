@@ -18,9 +18,6 @@ mkdir -p /app/wg++/bin.net/WebGrab+Plus
 mkdir -p /config/License
 ln -sf /config/License /app/wg++/bin.net/WebGrab+Plus
 
-# suid ping for just the stupidest reasons
-chmod u+s /bin/ping
-
 # permissions
 chown -R abc:abc \
     /app \

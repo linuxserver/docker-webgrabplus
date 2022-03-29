@@ -18,6 +18,7 @@ RUN \
     bash \
     curl \
     icu-libs \
+    iputils \
     unzip && \
   echo "**** install dotnet sdk ****" && \
   mkdir -p /app/dotnet && \
