@@ -246,6 +246,8 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.03.22:** - Rebase to Alpine 3.15.
+* **23.03.22:** - Update to use dotnet instead of mono.
 * **06.01.22:** - Rebase to Ubuntu focal. Enable auto builds on version updates (beta and stable).
 * **17.12.21:** - Update to version 3.2.2 beta.
 * **05.08.21:** - Update to version 3.2.1 beta.

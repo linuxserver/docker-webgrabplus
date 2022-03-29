@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd /app/wg++/bin || exit
+cd /app/wg++/bin.net || exit
 
-mono WebGrab+Plus.exe  "/config"
+/app/dotnet/dotnet "WebGrab+Plus.dll" "/config"
 
 exit 0

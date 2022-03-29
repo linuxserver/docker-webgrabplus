@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 # set version label
 ARG BUILD_DATE
@@ -10,26 +10,22 @@ LABEL maintainer="saarg"
 ARG WEBGRAB_VER
 
 # environment variables.
-ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME /config
 
 RUN \
-  echo "**** add mono repository ****" && \
-  apt-get update && \
-  apt-get install -y \
-    gnupg && \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
-  echo "deb https://download.mono-project.com/repo/ubuntu focal main" | tee /etc/apt/sources.list.d/mono-official.list && \
   echo "**** install packages ****" && \
-  apt-get update && \
-  apt-get install -y \
-    cron \
-    libmono-system-data4.0-cil \
-    libmono-system-net-http-webrequest4.0-cil \
-    libmono-system-web4.0-cil \
-    mono-devel \
-    mono-runtime \
+  apk -U --update --no-cache add \
+    bash \
+    curl \
+    icu-libs \
+    iputils \
     unzip && \
+  echo "**** install dotnet sdk ****" && \
+  mkdir -p /app/dotnet && \
+  curl -o /tmp/dotnet-install.sh -L \
+    https://dot.net/v1/dotnet-install.sh && \
+  chmod +x /tmp/dotnet-install.sh && \
+  /tmp/dotnet-install.sh -c 5.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
     WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
@@ -50,9 +46,7 @@ RUN \
   unzip -q /tmp/ini.zip -d /defaults/ini/ && \
   echo "**** cleanup ****" && \
   rm -rf \
-    /tmp/* \
-    /var/lib/apt/lists/* \
-    /var/tmp/*
+    /tmp/*
 
 # copy files
 COPY root/ /
