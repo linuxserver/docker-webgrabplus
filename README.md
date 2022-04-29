@@ -46,17 +46,17 @@ Find us at:
 
 ## Supported Architectures
 
-Our images support multiple architectures such as `x86-64`, `arm64` and `armhf`. We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
+We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
 
-Simply pulling `lscr.io/linuxserver/webgrabplus` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
+Simply pulling `lscr.io/linuxserver/webgrabplus:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
 
 The architectures supported by this image are:
 
-| Architecture | Tag |
-| :----: | --- |
-| x86-64 | amd64-latest |
-| arm64 | arm64v8-latest |
-| armhf | arm32v7-latest |
+| Architecture | Available | Tag |
+| :----: | :----: | ---- |
+| x86-64 | ✅ | amd64-\<version tag\> |
+| arm64 | ✅ | arm64v8-\<version tag\> |
+| armhf| ✅ | arm32v7-\<version tag\> |
 
 ## Application Setup
 
@@ -101,8 +101,10 @@ Here are some example snippets to help you get started creating a container.
 version: "2.1"
 services:
   webgrabplus:
-    image: lscr.io/linuxserver/webgrabplus
+    image: lscr.io/linuxserver/webgrabplus:latest
     container_name: webgrabplus
+    hostname: webgrabplus
+    mac_address: 00:00:00:00:00:00
     environment:
       - PUID=1000
       - PGID=1000
@@ -118,13 +120,15 @@ services:
 ```bash
 docker run -d \
   --name=webgrabplus \
+  --hostname=webgrabplus \
+  --mac-address=00:00:00:00:00:00 \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
   -v /path/to/config:/config \
   -v /path/to/data:/data \
   --restart unless-stopped \
-  lscr.io/linuxserver/webgrabplus
+  lscr.io/linuxserver/webgrabplus:latest
 ```
 
 ## Parameters
@@ -133,6 +137,8 @@ Container images are configured using parameters passed at runtime (such as thos
 
 | Parameter | Function |
 | :----: | --- |
+| `--hostname=` | Set the hostname for the container for the license check. |
+| `--mac-address=` | Set the mac_address for the container for the license check. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
@@ -182,7 +188,7 @@ We publish various [Docker Mods](https://github.com/linuxserver/docker-mods) to 
 * container version number
   * `docker inspect -f '{{ index .Config.Labels "build_version" }}' webgrabplus`
 * image version number
-  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/webgrabplus`
+  * `docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/webgrabplus:latest`
 
 ## Updating Info
 
@@ -200,7 +206,7 @@ Below are the instructions for updating containers:
 
 ### Via Docker Run
 
-* Update the image: `docker pull lscr.io/linuxserver/webgrabplus`
+* Update the image: `docker pull lscr.io/linuxserver/webgrabplus:latest`
 * Stop the running container: `docker stop webgrabplus`
 * Delete the container: `docker rm webgrabplus`
 * Recreate a new container with the same docker run parameters as instructed above (if mapped correctly to a host folder, your `/config` folder and settings will be preserved)
@@ -248,6 +254,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **29.04.22:** - Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples.
 * **23.03.22:** - Rebase to Alpine 3.15.
 * **23.03.22:** - Update to use dotnet instead of mono.
 * **06.01.22:** - Rebase to Ubuntu focal. Enable auto builds on version updates (beta and stable).
