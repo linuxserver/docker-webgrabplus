@@ -16,6 +16,12 @@ available_architectures:
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
+param_usage_include_hostname: true #you can set it to 'optional'
+param_hostname: "webgrabplus"
+param_hostname_desc: "Set the hostname for the container for the license check."
+param_usage_include_mac_address: true #you can set it to 'optional'
+param_mac_address: "00:00:00:00:00:00"
+param_mac_address_desc: "Set the mac_address for the container for the license check."
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Where webgrabplus should store it's config files." }
@@ -64,6 +70,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "29.04.22:", desc: "Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples." } 
   - { date: "23.03.22:", desc: "Rebase to Alpine 3.15." } 
   - { date: "23.03.22:", desc: "Update to use dotnet instead of mono." } 
   - { date: "06.01.22:", desc: "Rebase to Ubuntu focal. Enable auto builds on version updates (beta and stable)." } 
