@@ -70,6 +70,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.03.22:", desc: "Rebase to Alpine 3.16 and s6v3. Update to dotnet 6." } 
   - { date: "29.04.22:", desc: "Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples." } 
   - { date: "23.03.22:", desc: "Rebase to Alpine 3.15." } 
   - { date: "23.03.22:", desc: "Update to use dotnet instead of mono." } 
