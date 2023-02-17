@@ -56,7 +56,7 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf| ✅ | arm32v7-\<version tag\> |
+| armhf | ✅ | arm32v7-\<version tag\> |
 
 ## Application Setup
 
@@ -108,7 +108,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Etc/UTC
     volumes:
       - /path/to/config:/config
       - /path/to/data:/data
@@ -124,11 +124,12 @@ docker run -d \
   --mac-address=00:00:00:00:00:00 \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=Europe/London \
+  -e TZ=Etc/UTC \
   -v /path/to/config:/config \
   -v /path/to/data:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/webgrabplus:latest
+
 ```
 
 ## Parameters
@@ -141,7 +142,7 @@ Container images are configured using parameters passed at runtime (such as thos
 | `--mac-address=` | Set the mac_address for the container for the license check. |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
-| `-e TZ=Europe/London` | Specify a timezone to use EG Europe/London |
+| `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
 | `-v /config` | Where webgrabplus should store it's config files. |
 | `-v /data` | Where webgrabplus should store it's data files. |
 
