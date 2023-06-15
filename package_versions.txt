@@ -4,7 +4,7 @@ Azure.Storage.Common                                                           1
 Azure.Storage.Files.Shares                                                     12.11.0                dotnet  
 Microsoft.Bcl.AsyncInterfaces                                                  1.1.1                  dotnet  
 Microsoft.CSharp                                                               4.3.0                  dotnet  
-Microsoft.NETCore.App.Runtime.linux-musl-x64                                   6.0.16                 dotnet  
+Microsoft.NETCore.App.Runtime.linux-musl-x64                                   6.0.18                 dotnet  
 Microsoft.NETCore.Platforms                                                    1.1.0                  dotnet  
 Microsoft.NETCore.Targets                                                      1.1.0                  dotnet  
 Microsoft.Win32.Primitives                                                     4.3.0                  dotnet  
