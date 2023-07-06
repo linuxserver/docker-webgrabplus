@@ -56,7 +56,7 @@ The architectures supported by this image are:
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
 | arm64 | ✅ | arm64v8-\<version tag\> |
-| armhf | ✅ | arm32v7-\<version tag\> |
+| armhf | ❌ | |
 
 ## Application Setup
 
@@ -255,6 +255,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **06.07.23:** - Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)
 * **13.03.23:** - Rebase to Alpine 3.17.
 * **23.03.22:** - Rebase to Alpine 3.16 and s6v3. Update to dotnet 6.
 * **29.04.22:** - Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples.

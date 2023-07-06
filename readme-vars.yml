@@ -6,13 +6,10 @@ project_url: "http://www.webgrabplus.com"
 project_logo: "http://www.webgrabplus.com/sites/default/themes/WgTheme/images/slideshows/EPG_fading.jpg"
 project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
-
 # supported architectures
 available_architectures:
-  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
-  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
-  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
-
+  - {arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - {arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
 # container parameters
 common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
@@ -24,17 +21,15 @@ param_mac_address: "00:00:00:00:00:00"
 param_mac_address_desc: "Set the mac_address for the container for the license check."
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/config", desc: "Where webgrabplus should store it's config files." }
-  - { vol_path: "/data", vol_host_path: "/path/to/data", desc: "Where webgrabplus should store it's data files." }
+  - {vol_path: "/config", vol_host_path: "/path/to/config", desc: "Where webgrabplus should store it's config files."}
+  - {vol_path: "/data", vol_host_path: "/path/to/data", desc: "Where webgrabplus should store it's data files."}
 param_usage_include_ports: false
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
-
+  - {env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
 # optional parameters
 optional_block_1: false
 optional_block_1_items: ""
-
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -67,31 +62,31 @@ app_setup_block: |
    │ │ │ │ │
    * * * * *  /bin/bash /defaults/update.sh
   ```
-
 # changelog
 changelogs:
-  - { date: "13.03.23:", desc: "Rebase to Alpine 3.17." }
-  - { date: "23.03.22:", desc: "Rebase to Alpine 3.16 and s6v3. Update to dotnet 6." }
-  - { date: "29.04.22:", desc: "Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples." }
-  - { date: "23.03.22:", desc: "Rebase to Alpine 3.15." }
-  - { date: "23.03.22:", desc: "Update to use dotnet instead of mono." }
-  - { date: "06.01.22:", desc: "Rebase to Ubuntu focal. Enable auto builds on version updates (beta and stable)." }
-  - { date: "17.12.21:", desc: "Update to version 3.2.2 beta." }
-  - { date: "05.08.21:", desc: "Update to version 3.2.1 beta." }
-  - { date: "05.06.21:", desc: "Added mono-devel dependency." }
-  - { date: "04.06.21:", desc: "Update to version 3.1.8 beta." }
-  - { date: "22.03.21:", desc: "Update to version 3.1.7 beta." }
-  - { date: "07.03.21:", desc: "Update to version 3.1.6 beta." }
-  - { date: "29.01.21:", desc: "Update external version number to show as 3.1.5." }
-  - { date: "24.01.21:", desc: "Update to version 3.1.5 beta." }
-  - { date: "22.12.20:", desc: "Update to version 3.1.4 beta." }
-  - { date: "12.10.20:", desc: "Fix version number in jenkinsfile." }
-  - { date: "12.10.20:", desc: "Update to version 3.1.1 beta." }
-  - { date: "22.06.20:", desc: "Add mono webrequest library." }
-  - { date: "18.06.20:", desc: "Update to v3.1.0." }
-  - { date: "29.03.20:", desc: "Update to v3.0.0. Changed to use wg3-cron file." }
-  - { date: "28.05.19:", desc: "Update to v2.1.0 and beta v2.1.9, rebase to bionic." }
-  - { date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag." }
-  - { date: "21.03.19:", desc: "Update to beta 2.1.7." }
-  - { date: "19.02.19:", desc: "Add pipeline logic and multi arch." }
-  - { date: "18.01.18:", desc: "Initial Release." }
+  - {date: "06.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
+  - {date: "13.03.23:", desc: "Rebase to Alpine 3.17."}
+  - {date: "23.03.22:", desc: "Rebase to Alpine 3.16 and s6v3. Update to dotnet 6."}
+  - {date: "29.04.22:", desc: "Add `hostname` and `mac_address` arguments that are needed for the license check to compose and cli samples."}
+  - {date: "23.03.22:", desc: "Rebase to Alpine 3.15."}
+  - {date: "23.03.22:", desc: "Update to use dotnet instead of mono."}
+  - {date: "06.01.22:", desc: "Rebase to Ubuntu focal. Enable auto builds on version updates (beta and stable)."}
+  - {date: "17.12.21:", desc: "Update to version 3.2.2 beta."}
+  - {date: "05.08.21:", desc: "Update to version 3.2.1 beta."}
+  - {date: "05.06.21:", desc: "Added mono-devel dependency."}
+  - {date: "04.06.21:", desc: "Update to version 3.1.8 beta."}
+  - {date: "22.03.21:", desc: "Update to version 3.1.7 beta."}
+  - {date: "07.03.21:", desc: "Update to version 3.1.6 beta."}
+  - {date: "29.01.21:", desc: "Update external version number to show as 3.1.5."}
+  - {date: "24.01.21:", desc: "Update to version 3.1.5 beta."}
+  - {date: "22.12.20:", desc: "Update to version 3.1.4 beta."}
+  - {date: "12.10.20:", desc: "Fix version number in jenkinsfile."}
+  - {date: "12.10.20:", desc: "Update to version 3.1.1 beta."}
+  - {date: "22.06.20:", desc: "Add mono webrequest library."}
+  - {date: "18.06.20:", desc: "Update to v3.1.0."}
+  - {date: "29.03.20:", desc: "Update to v3.0.0. Changed to use wg3-cron file."}
+  - {date: "28.05.19:", desc: "Update to v2.1.0 and beta v2.1.9, rebase to bionic."}
+  - {date: "23.03.19:", desc: "Switching to new Base images, shift to arm32v7 tag."}
+  - {date: "21.03.19:", desc: "Update to beta 2.1.7."}
+  - {date: "19.02.19:", desc: "Add pipeline logic and multi arch."}
+  - {date: "18.01.18:", desc: "Initial Release."}
