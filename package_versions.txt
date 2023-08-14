@@ -171,12 +171,12 @@ WG.azure                                             1.0.1.0                dotn
 WG.common.logger                                     1.0.0.0                dotnet  
 WG.common.timezone                                   1.0.0.0                dotnet  
 WG.donators                                          1.0.0.0                dotnet  
-WebGrab+Plus                                         5.0.1.0                dotnet  
+WebGrab+Plus                                         5.1.0.0                dotnet  
 WindowsBase                                          6.0.2123.36311         dotnet  
 alpine-baselayout                                    3.4.0-r0               apk     
 alpine-baselayout-data                               3.4.0-r0               apk     
 alpine-keys                                          2.4-r1                 apk     
-alpine-release                                       3.17.4-r0              apk     
+alpine-release                                       3.17.5-r0              apk     
 apk-tools                                            2.12.10-r1             apk     
 bash                                                 5.2.15-r0              apk     
 brotli-libs                                          1.0.9-r9               apk     
