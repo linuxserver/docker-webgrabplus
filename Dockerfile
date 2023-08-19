@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.17
+FROM ghcr.io/linuxserver/baseimage-alpine:3.18
 
 # set version label
 ARG BUILD_DATE
@@ -25,13 +25,13 @@ RUN \
   curl -o /tmp/dotnet-install.sh -L \
     https://dot.net/v1/dotnet-install.sh && \
   chmod +x /tmp/dotnet-install.sh && \
-  /tmp/dotnet-install.sh -c 6.0 --install-dir /app/dotnet --runtime dotnet && \
+  /tmp/dotnet-install.sh -c 7.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
     WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
   fi && \
   echo "Found Webgrabplus version ${WEBGRAB_VER}" && \
-  WEBGRAB_URL=$(curl -fsL http://webgrabplus.com/download/sw/v${WEBGRAB_VER} | grep '>Linux</a>' | sed 's|.*\(http://webgrab.*tar\.gz\).*|\1|') && \
+  WEBGRAB_URL=$(curl -fsL http://webgrabplus.com/download/sw/v${WEBGRAB_VER} | grep '>Linux</a>' | sed 's|.*\(http://webgrab.*.gz\).*|\1|') && \
   mkdir -p \
     /app/wg++ && \
   curl -o /tmp/wg++.tar.gz -L \
