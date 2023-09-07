@@ -1,11 +1,8 @@
 NAME                                                 VERSION                 TYPE   
 Json.NET .NET Standard 1.3                           10.0.2.20802            dotnet  
 Microsoft Azure Client Pipeline                      1.2500.22.33004         dotnet  
-Microsoft Azure Client Pipeline                      1.3100.23.21004         dotnet  
 Microsoft Azure.Storage.Common client library        12.1200.22.35704        dotnet  
-Microsoft Azure.Storage.Common client library        12.1500.23.21104        dotnet  
 Microsoft Azure.Storage.Files.Shares client library  12.1100.22.35704        dotnet  
-Microsoft Azure.Storage.Files.Shares client library  12.1400.23.21104        dotnet  
 Microsoft.Bcl.AsyncInterfaces                        4.700.20.21406          dotnet  
 Microsoft.CSharp                                     7.0.1023.36312          dotnet  
 Microsoft.VisualBasic                                7.0.1023.36312          dotnet  
@@ -174,9 +171,7 @@ System.Xml.XPath                                     7.0.1023.36312          dot
 System.Xml.XPath.XDocument                           7.0.1023.36312          dotnet  
 System.Xml.XmlDocument                               7.0.1023.36312          dotnet  
 System.Xml.XmlSerializer                             7.0.1023.36312          dotnet  
-WG++Alert                                            1.3                     dotnet  
 WG.azure                                             1.0.1.0                 dotnet  
-WG.azure                                             2.0.0.0                 dotnet  
 WG.common.logger                                     1.0.0.0                 dotnet  
 WG.common.timezone                                   1.0.0.0                 dotnet  
 WG.donators                                          1.0.0.0                 dotnet  
@@ -215,7 +210,7 @@ libidn2                                              2.3.4-r1                apk
 libintl                                              0.21.1-r7               apk     
 libmd                                                1.0.4-r2                apk     
 libncursesw                                          6.4_p20230506-r0        apk     
-libproc2                                             4.0.3-r1                apk     
+libproc2                                             4.0.4-r0                apk     
 libssl3                                              3.1.2-r0                apk     
 libstdc++                                            12.2.1_git20220924-r10  apk     
 libunistring                                         1.1-r1                  apk     
@@ -228,7 +223,7 @@ netcat-openbsd                                       1.219-r1                apk
 netstandard                                          7.0.1023.36312          dotnet  
 nghttp2-libs                                         1.55.1-r0               apk     
 oniguruma                                            6.9.8-r1                apk     
-procps-ng                                            4.0.3-r1                apk     
+procps-ng                                            4.0.4-r0                apk     
 readline                                             8.2.1-r1                apk     
 scanelf                                              1.3.7-r1                apk     
 shadow                                               4.13-r4                 apk     
