@@ -1,0 +1,2 @@
+# min   hour    day     month   weekday command
+2       3       *       *       *       /app/update.sh 2>&1
