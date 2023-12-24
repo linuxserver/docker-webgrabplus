@@ -21,7 +21,7 @@ param_mac_address: "00:00:00:00:00:00"
 param_mac_address_desc: "Set the mac_address for the container for the license check."
 param_usage_include_vols: true
 param_volumes:
-  - {vol_path: "/config", vol_host_path: "/path/to/config", desc: "Where webgrabplus should store it's config files."}
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
   - {vol_path: "/data", vol_host_path: "/path/to/data", desc: "Where webgrabplus should store it's data files."}
 param_usage_include_ports: false
 param_usage_include_env: true
@@ -47,6 +47,7 @@ app_setup_block: |
   To adjust the scheduled cron job, you can apply our [universal cron mod](https://github.com/linuxserver/docker-mods/tree/universal-cron).
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - {date: "18.08.23:", desc: "Rebase to Alpine 3.18."}
   - {date: "16.08.23:", desc: "Update dotnet framework to 7.x."}
   - {date: "06.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
