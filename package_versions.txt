@@ -1,8 +1,8 @@
 NAME                                                 VERSION                                                             TYPE   
 Json.NET                                             10.0.2.20802                                                        dotnet  
-Microsoft Azure Client Pipeline                      1.2500.22.33004                                                     dotnet  
-Microsoft Azure.Storage.Common client library        12.1200.22.35704                                                    dotnet  
-Microsoft Azure.Storage.Files.Shares client library  12.1100.22.35704                                                    dotnet  
+Microsoft Azure Client Pipeline                      1.3100.23.21004                                                     dotnet  
+Microsoft Azure.Storage.Common client library        12.1500.23.21104                                                    dotnet  
+Microsoft Azure.Storage.Files.Shares client library  12.1400.23.21104                                                    dotnet  
 Microsoft.Bcl.AsyncInterfaces                        4.700.20.21406                                                      dotnet  
 Microsoft.CSharp                                     7.0.1423.51910                                                      dotnet  
 Microsoft.VisualBasic                                7.0.1423.51910                                                      dotnet  
@@ -171,11 +171,11 @@ System.Xml.XPath                                     7.0.1423.51910             
 System.Xml.XPath.XDocument                           7.0.1423.51910                                                      dotnet  
 System.Xml.XmlDocument                               7.0.1423.51910                                                      dotnet  
 System.Xml.XmlSerializer                             7.0.1423.51910                                                      dotnet  
-WG.azure                                             1.0.1.0                                                             dotnet  
+WG.azure                                             3.0.0.0                                                             dotnet  
 WG.common.logger                                     1.0.0.0                                                             dotnet  
 WG.common.timezone                                   1.0.0.0                                                             dotnet  
 WG.donators                                          1.0.0.0                                                             dotnet  
-WebGrab+Plus                                         5.1.3.0                                                             dotnet  
+WebGrab+Plus                                         5.1.4.0                                                             dotnet  
 WindowsBase                                          7.0.1423.51910                                                      dotnet  
 alpine-baselayout                                    3.4.3-r1                                                            apk     
 alpine-baselayout-data                               3.4.3-r1                                                            apk     
