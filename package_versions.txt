@@ -1,5 +1,5 @@
 NAME                                                 VERSION                TYPE     
-Json.NET                                             10.0.2.20802           dotnet    
+Json.NET                                             13.0.3.27908           dotnet    
 Microsoft Azure Client Pipeline                      1.3100.23.21004        dotnet    
 Microsoft Azure.Storage.Common client library        12.1500.23.21104       dotnet    
 Microsoft Azure.Storage.Files.Shares client library  12.1400.23.21104       dotnet    
@@ -174,8 +174,8 @@ System.Xml.XmlSerializer                             7.0.1824.16914         dotn
 WG.azure                                             3.0.0.0                dotnet    
 WG.common.logger                                     1.0.0.0                dotnet    
 WG.common.timezone                                   1.0.0.0                dotnet    
-WG.donators                                          1.0.0.0                dotnet    
-WebGrab+Plus                                         5.1.4.0                dotnet    
+WG.donators                                          2.0.0.0                dotnet    
+WebGrab+Plus                                         5.1.5.0                dotnet    
 WindowsBase                                          7.0.1824.16914         dotnet    
 alpine-baselayout                                    3.4.3-r2               apk       
 alpine-baselayout-data                               3.4.3-r2               apk       
