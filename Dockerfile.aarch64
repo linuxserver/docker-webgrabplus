@@ -19,14 +19,14 @@ RUN \
   echo "**** install packages ****" && \
   apk -U --update --no-cache add \
     icu-libs \
-    iputils \    
+    iputils \
     unzip && \
   echo "**** install dotnet sdk ****" && \
   mkdir -p /app/dotnet && \
   curl -o /tmp/dotnet-install.sh -L \
     https://dot.net/v1/dotnet-install.sh && \
   chmod +x /tmp/dotnet-install.sh && \
-  /tmp/dotnet-install.sh -c 7.0 --install-dir /app/dotnet --runtime dotnet && \
+  /tmp/dotnet-install.sh -c 8.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
     WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
