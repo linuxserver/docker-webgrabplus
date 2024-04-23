@@ -47,6 +47,7 @@ app_setup_block: |
   To adjust the scheduled cron job, you can apply our [universal cron mod](https://github.com/linuxserver/docker-mods/tree/universal-cron).
 # changelog
 changelogs:
+  - {date: "23.04.24:", desc: "Bump dotnet framework to 8.x."}
   - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - {date: "18.08.23:", desc: "Rebase to Alpine 3.18."}
   - {date: "16.08.23:", desc: "Update dotnet framework to 7.x."}
