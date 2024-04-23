@@ -287,6 +287,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **23.04.24:** - Bump dotnet framework to 8.x.
 * **23.12.23:** - Rebase to Alpine 3.19.
 * **18.08.23:** - Rebase to Alpine 3.18.
 * **16.08.23:** - Update dotnet framework to 7.x.
