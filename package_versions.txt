@@ -175,7 +175,7 @@ WG.azure                                             3.0.0.0                dotn
 WG.common.logger                                     1.0.0.0                dotnet    
 WG.common.timezone                                   1.0.0.0                dotnet    
 WG.donators                                          2.0.0.0                dotnet    
-WebGrab+Plus                                         5.1.5.0                dotnet    
+WebGrab+Plus                                         5.2.0.0                dotnet    
 WindowsBase                                          8.0.624.26715          dotnet    
 alpine-baselayout                                    3.4.3-r2               apk       
 alpine-baselayout-data                               3.4.3-r2               apk       
