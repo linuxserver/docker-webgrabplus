@@ -23,13 +23,6 @@ param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
   - {vol_path: "/data", vol_host_path: "/path/to/data", desc: "Where webgrabplus should store it's data files."}
-param_usage_include_ports: false
-param_usage_include_env: true
-param_env_vars:
-  - {env_var: "TZ", env_value: "Europe/London", desc: "Specify a timezone to use EG Europe/London"}
-# optional parameters
-optional_block_1: false
-optional_block_1_items: ""
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
@@ -47,8 +40,9 @@ app_setup_block: |
   To adjust the scheduled cron job, you can apply our [universal cron mod](https://github.com/linuxserver/docker-mods/tree/universal-cron).
 # changelog
 changelogs:
+  - {date: "25.06.24:", desc: "Rebase to Alpine 3.20."}
   - {date: "23.04.24:", desc: "Bump dotnet framework to 8.x."}
-  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
+  - {date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - {date: "18.08.23:", desc: "Rebase to Alpine 3.18."}
   - {date: "16.08.23:", desc: "Update dotnet framework to 7.x."}
   - {date: "06.07.23:", desc: "Deprecate armhf. As announced [here](https://www.linuxserver.io/blog/a-farewell-to-arm-hf)"}
