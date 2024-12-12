@@ -72,10 +72,12 @@ The /data volume mapping is where WebGrab+Plus outputs the xml file. To use the 
 
 To adjust the scheduled cron job, you can apply our [universal cron mod](https://github.com/linuxserver/docker-mods/tree/universal-cron).
 
- 
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
+
+>[!NOTE]
+>Unless a parameter is flaged as 'optional', it is *mandatory* and a value must be provided.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
