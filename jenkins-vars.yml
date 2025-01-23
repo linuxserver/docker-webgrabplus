@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-webgrabplus
 external_type: na
-custom_version_command: "curl -fsL 'http://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\\\\1|'"
+custom_version_command: "curl -fsL 'https://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\\\\1|'"
 release_type: stable
 release_tag: latest
 ls_branch: master

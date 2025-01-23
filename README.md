@@ -39,9 +39,9 @@ Find us at:
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-webgrabplus%2Fjob%2Fmaster%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-webgrabplus/job/master/)
 [![LSIO CI](https://img.shields.io/badge/dynamic/yaml?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.linuxserver.io%2Flinuxserver%2Fwebgrabplus%2Flatest%2Fci-status.yml)](https://ci-tests.linuxserver.io/linuxserver/webgrabplus/latest/index.html)
 
-[Webgrabplus](http://www.webgrabplus.com) is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.
+[Webgrabplus](https://www.webgrabplus.com) is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.
 
-[![webgrabplus](http://www.webgrabplus.com/sites/default/themes/WgTheme/images/slideshows/EPG_fading.jpg)](http://www.webgrabplus.com)
+[![webgrabplus](https://www.webgrabplus.com/sites/default/themes/WgTheme/images/slideshows/EPG_fading.jpg)](https://www.webgrabplus.com)
 
 ## Supported Architectures
 
@@ -59,7 +59,7 @@ The architectures supported by this image are:
 
 ## Application Setup
 
-To configure WebGrab+Plus follow the [documentation](http://www.webgrabplus.com/documentation/configuration/)
+To configure WebGrab+Plus follow the [documentation](https://www.webgrabplus.com/documentation/configuration/)
 
 **Please note that depending on your host this container may not work with the `no-new-privileges=true` security-opt.**
 
@@ -291,6 +291,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.06.24:** - Rebase to Alpine 3.21.
 * **25.06.24:** - Rebase to Alpine 3.20.
 * **23.04.24:** - Bump dotnet framework to 8.x.
 * **23.12.23:** - Rebase to Alpine 3.19.

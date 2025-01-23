@@ -23,7 +23,7 @@ jobs:
           echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
           echo "> External trigger running off of master branch. To disable this trigger, add \`webgrabplus_master\` into the Github organizational variable \`SKIP_EXTERNAL_TRIGGER\`." >> $GITHUB_STEP_SUMMARY
           printf "\n## Retrieving external version\n\n" >> $GITHUB_STEP_SUMMARY
-          EXT_RELEASE=$(curl -fsL 'http://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\1|')
+          EXT_RELEASE=$(curl -fsL 'https://webgrabplus.com/download/sw' | grep -m1 '/download/sw/v' | sed -r 's|.*/download/sw/v(.*).>V.*|\1|')
           echo "Type is \`custom_version_command\`" >> $GITHUB_STEP_SUMMARY
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-alpine:3.20
+FROM ghcr.io/linuxserver/baseimage-alpine:3.21
 
 # set version label
 ARG BUILD_DATE
@@ -28,10 +28,10 @@ RUN \
   /tmp/dotnet-install.sh -c 8.0 --install-dir /app/dotnet --runtime dotnet && \
   echo "**** install webgrabplus ****" && \
   if [ -z "$WEBGRAB_VER" ]; then \
-    WEBGRAB_VER=$(curl -fsL http://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
+    WEBGRAB_VER=$(curl -fsL https://webgrabplus.com/download/sw | grep -m1 /download/sw/v | sed 's|.*/download/sw/v\(.*\)">V.*|\1|'); \
   fi && \
   echo "Found Webgrabplus version ${WEBGRAB_VER}" && \
-  WEBGRAB_URL=$(curl -fsL http://webgrabplus.com/download/sw/v${WEBGRAB_VER} | grep '>Linux</a>' | sed 's|.*\(http://webgrab.*.gz\).*|\1|') && \
+  WEBGRAB_URL=$(curl -fsL https://webgrabplus.com/download/sw/v${WEBGRAB_VER} | grep '>Linux</a>' | sed 's|.*\(https://webgrab.*.gz\).*|\1|') && \
   mkdir -p \
     /app/wg++ && \
   curl -o /tmp/wg++.tar.gz -L \
@@ -42,7 +42,7 @@ RUN \
   echo "**** download siteini.pack ****" && \
   curl -o \
     /tmp/ini.zip -L \
-    http://www.webgrabplus.com/sites/default/files/download/ini/SiteIniPack_current.zip && \
+    https://www.webgrabplus.com/sites/default/files/download/ini/SiteIniPack_current.zip && \
   unzip -q /tmp/ini.zip -d /defaults/ini/ && \
   printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** cleanup ****" && \
