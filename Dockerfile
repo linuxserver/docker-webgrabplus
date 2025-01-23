@@ -12,7 +12,7 @@ LABEL maintainer="saarg"
 ARG WEBGRAB_VER
 
 # environment variables.
-ENV HOME /config
+ENV HOME=/config
 
 RUN \
   echo "**** install packages ****" && \

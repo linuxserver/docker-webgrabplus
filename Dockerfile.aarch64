@@ -12,8 +12,7 @@ LABEL maintainer="saarg"
 ARG WEBGRAB_VER
 
 # environment variables.
-ARG DEBIAN_FRONTEND="noninteractive"
-ENV HOME /config
+ENV HOME=/config
 
 RUN \
   echo "**** install packages ****" && \
