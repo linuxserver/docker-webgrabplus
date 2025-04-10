@@ -4,7 +4,7 @@ Azure.Storage.Common                          12.15.0           dotnet
 Azure.Storage.Files.Shares                    12.14.0           dotnet    
 FluentFTP                                     49.0.2            dotnet    
 Microsoft.Bcl.AsyncInterfaces                 1.1.1             dotnet    
-Microsoft.NETCore.App.Runtime.linux-musl-x64  8.0.14            dotnet    
+Microsoft.NETCore.App.Runtime.linux-musl-x64  8.0.15            dotnet    
 Newtonsoft.Json                               13.0.3            dotnet    
 SharpCompress                                 0.39.0            dotnet    
 System.IO.Hashing                             6.0.0             dotnet    
@@ -27,7 +27,7 @@ bash                                          5.2.37-r0         apk
 brotli-libs                                   1.1.0-r2          apk       
 busybox                                       1.37.0-r12        apk       
 busybox-binsh                                 1.37.0-r12        apk       
-c-ares                                        1.34.3-r0         apk       
+c-ares                                        1.34.5-r0         apk       
 ca-certificates                               20241121-r1       apk       
 ca-certificates-bundle                        20241121-r1       apk       
 catatonit                                     0.2.0-r0          apk       
