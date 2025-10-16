@@ -4,7 +4,7 @@ Azure.Storage.Common                          12.15.0           dotnet
 Azure.Storage.Files.Shares                    12.14.0           dotnet    
 FluentFTP                                     52.1.0            dotnet    
 Microsoft.Bcl.AsyncInterfaces                 1.1.1             dotnet    
-Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.9             dotnet    
+Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.10            dotnet    
 Newtonsoft.Json                               13.0.3            dotnet    
 SharpCompress                                 0.40.0            dotnet    
 System.IO.Hashing                             6.0.0             dotnet    
@@ -20,7 +20,7 @@ acl-libs                                      2.3.2-r1          apk
 alpine-baselayout                             3.7.0-r0          apk       
 alpine-baselayout-data                        3.7.0-r0          apk       
 alpine-keys                                   2.5-r0            apk       
-alpine-release                                3.22.1-r0         apk       
+alpine-release                                3.22.2-r0         apk       
 apk-tools                                     2.14.9-r3         apk       
 bash                                          5.2.37-r0         apk       
 brotli-libs                                   1.1.0-r2          apk       
