@@ -10,7 +10,7 @@ SharpCompress                                 0.40.0            dotnet
 System.IO.Hashing                             6.0.0             dotnet    
 System.Memory.Data                            1.0.2             dotnet    
 WG.azure                                      3.1.0             dotnet    
-WG.donators                                   4.0.0             dotnet    
+WG.donators                                   4.1.0             dotnet    
 WG.logger                                     2.0.0             dotnet    
 WG.timezone                                   1.0.0             dotnet    
 WG.xmltv                                      2.0.0             dotnet    
