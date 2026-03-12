@@ -4,7 +4,7 @@ Azure.Storage.Common                          12.15.0           dotnet
 Azure.Storage.Files.Shares                    12.14.0           dotnet    
 FluentFTP                                     52.1.0            dotnet    
 Microsoft.Bcl.AsyncInterfaces                 1.1.1             dotnet    
-Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.13            dotnet    
+Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.14            dotnet    
 SharpCompress                                 0.40.0            dotnet    
 System.IO.Hashing                             6.0.0             dotnet    
 System.Memory.Data                            1.0.2             dotnet    
@@ -72,7 +72,7 @@ scanelf                                       1.3.8-r1          apk
 shadow                                        4.17.3-r0         apk       
 skalibs-libs                                  2.14.4.0-r0       apk       
 ssl_client                                    1.37.0-r20        apk       
-tzdata                                        2025c-r0          apk       
+tzdata                                        2026a-r0          apk       
 unzip                                         6.0-r15           apk       
 utmps-libs                                    0.1.3.1-r0        apk       
 xmltv_time_modify                             1.0.0.0           dotnet    
