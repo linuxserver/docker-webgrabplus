@@ -2,7 +2,7 @@ NAME                                          VERSION           TYPE
 Azure.Core                                    1.31.0            dotnet    
 Azure.Storage.Common                          12.15.0           dotnet    
 Azure.Storage.Files.Shares                    12.14.0           dotnet    
-FluentFTP                                     54.1.2            dotnet    
+FluentFTP                                     52.1.0            dotnet    
 Microsoft.Bcl.AsyncInterfaces                 1.1.1             dotnet    
 Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.16            dotnet    
 SharpCompress                                 0.40.0            dotnet    
