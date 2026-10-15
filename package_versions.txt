@@ -4,7 +4,7 @@ Azure.Storage.Common                          12.15.0           dotnet
 Azure.Storage.Files.Shares                    12.14.0           dotnet    
 FluentFTP                                     54.2.0            dotnet    
 Microsoft.Bcl.AsyncInterfaces                 6.0.0             dotnet    
-Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.20            dotnet    
+Microsoft.NETCore.App.Runtime.linux-musl-x64  9.0.21            dotnet    
 Microsoft.Playwright                          1.62.0            dotnet    
 SharpCompress                                 0.50.4            dotnet    
 System.IO.Hashing                             6.0.0             dotnet    
